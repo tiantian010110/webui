@@ -1,0 +1,57 @@
+.form-group {
+	margin-bottom: 0;
+}
+
+.form-group-info {
+	width: 100%;
+	margin-bottom: 35px;
+	overflow: inherit;
+}
+
+.lyb-tabs .tabs-container .tab-pane {
+	border: solid 1px #ccc;
+	padding: 15px;
+	visibility: hidden;
+	display: block !important;
+	overflow: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.lyb-tabs .tabs-container .tab-pane.active {
+	visibility: visible;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	padding: 0;
+	line-height: initial;
+	vertical-align: middle;
+	border-top: none;
+}
+
+.table {
+	margin-bottom: 0;
+}
+
+.cul-table {
+	overflow: initial;
+}
+
+.right-tab-inner {
+	overflow: initial;
+}
+
+.cul-table:after {
+	clear: both;
+	content: '';
+	display:block;
+}
+
+.right-tab-inner:after {
+	clear: both;
+	content: '';
+	display:block;
+}

@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<style type="text/css">
+	.lyb-upload .lyb-datasheet .viewhead-border .head-row .head-cell{
+		height: 27px;
+		line-height: 27px;
+	}
+	.lyb-upload .lyb-datasheet .viewgrid-border .datasheet-view .view-body .view-row .view-cell {
+		height: 28px;
+		line-height: 28px;
+	}
+</style>
+<div id="upload" class="lyb-upload" data-place-holder="请选择要上传的文件" data-url="../upload" data-required="true"></div>
+<input type="button" onclick="upload()" value="上传"/>
+<div id="multi" class="lyb-upload" data-place-holder="请选择要上传的文件" data-url="../upload" data-allow-multi="true"></div>
+<input type="button" onclick="upload1()" value="上传"/>
+<script>
+    lyb.parse();
+    function upload(){
+    	var up = lyb.get('upload');
+    	up._upload();
+    }
+    function upload1(){
+    	var up = lyb.get('multi');
+    	up._upload();
+    }
+</script>

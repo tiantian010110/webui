@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<div id="accordion1" class="lyb-accordion" data-sort-field="id" data-allow-multi="false" style="width: 210px;"></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<input type="button" value="toggleAccordion" onclick="toggle()"/>
+<script>
+
+	lyb.parse();
+	var accordion1 = lyb.get("accordion1");  
+	accordion1.setData([
+         {"id":"1","text":"表单", "url": "html/form.html"},
+         {"id":"5","text":"通知消息", "url": "html/notice.html"},
+         {"id":"24", "pid": "2", "text":"测试二级菜单014", "url": "html/richtext.html"},
+         {"id":"72", "pid": "7", "text":"测试二级菜单042", "url": "html/richtext.html"},
+         {"id":"73", "pid": "7", "text":"测试二级菜单043", "url": "html/richtext.html"},
+         {"id":"2","text":"测试一级菜单01"},
+         {"id":"64", "pid": "6", "text":"测试二级菜单034", "url": "html/richtext.html"},
+         {"id":"62", "pid": "6", "text":"测试二级菜单032", "url": "html/richtext.html"},
+         {"id":"61", "pid": "6", "text":"测试二级菜单031", "url": "html/richtext.html"},
+         {"id":"63", "pid": "6", "text":"测试二级菜单033", "url": "html/richtext.html"},
+         {"id":"32", "pid": "3", "text":"测试二级菜单022", "url": "html/richtext.html"},
+         {"id":"34", "pid": "3", "text":"测试二级菜单024", "url": "html/richtext.html"},
+         {"id":"7","text":"测试一级菜单04"},
+         {"id":"33", "pid": "3", "text":"测试二级菜单023", "url": "html/richtext.html"},
+         {"id":"21", "pid": "2", "text":"测试二级菜单011", "url": "html/richtext.html"},
+         {"id":"22", "pid": "2", "text":"测试二级菜单012", "url": "html/richtext.html"},
+         {"id":"23", "pid": "2", "text":"测试二级菜单013", "url": "html/richtext.html"},
+         {"id":"6","text":"测试一级菜单03"},
+         {"id":"31", "pid": "3", "text":"测试二级菜单021", "url": "html/richtext.html"},
+         {"id":"4","text":"表格", "url": "html/datasheet.html"},
+         {"id":"71", "pid": "7", "text":"测试二级菜单041", "url": "html/richtext.html"},
+         {"id":"3","text":"测试一级菜单02"},
+         {"id":"74", "pid": "7", "text":"测试二级菜单044", "url": "html/richtext.html"}
+    ]);
+	function toggle(){
+		accordion1.toggle();
+	}
+</script>

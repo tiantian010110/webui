@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<style type="text/css">
+
+</style>
+Notice
+<button onclick="openNotice('info')">信息</button>
+<button onclick="openNotice('warning')">警告</button>
+<button onclick="openNotice('success')">成功</button>
+<button onclick="openNotice('error')">错误</button>
+<br/>
+<br/>
+<br/>
+<br/>
+Confirm
+<button onclick="openConfirm()">确认</button>
+<br/>
+<br/>
+<br/>
+<br/>
+Tips
+<button onclick="openTips('info')">信息</button>
+<button onclick="openTips('warning')">警告</button>
+<button onclick="openTips('success')">成功</button>
+<button onclick="openTips('error')">错误</button>
+<script type="text/javascript" src="resources/lybui/plugins/lyb.notice.js"></script>
+<script type="text/javascript" src="resources/lybui/plugins/lyb.tips.js"></script>
+<script>
+	lyb.parse();
+	
+	function openTips(level){
+		lyb.showTip('这是一个' + level + "提示!", function(e){console.log(e)}, level);
+	}
+	function openNotice(level){
+		lyb.alert('这是一个' + level + "提示!", function(e){console.log(e)}, level);
+	}
+	function openConfirm(){
+		lyb.confirm('这是一个确认提示框!', function(e){console.log('success', e)}, function(e){console.log('error', e)});
+	}
+</script>

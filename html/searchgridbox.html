@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<style type="text/css">
+.combobox {
+	padding: 0 20px;
+}
+
+.combobox>div {
+	margin: 20px;
+}
+</style>
+<div class="combobox">
+	<div id="blockbox" class="lyb-blockbox" data-value="1" data-text-field="name" data-matcher-fields="['mobile','name','memberCode']" data-place-holder="的是提示信息" data-columns="columns" data-value-field="zid" data-url="html/data.jsp"></div>
+	<button onclick="alert(lyb.get('blockbox').getValue())">获取数据</button>
+	<button onclick="lyb.get('blockbox').setValue('2,3')">设置数据</button>
+	<div id="multiblockbox" class="lyb-blockbox" data-value="1" data-text-field="name" data-allow-multi="true" data-place-holder="的是提示信息" data-matcher-fields="['mobile','name','memberCode']" data-columns="columns" data-value-field="zid" data-url="html/data.jsp"></div>
+	<button onclick="alert(lyb.get('multiblockbox').getValue())">获取数据</button>
+	<button onclick="lyb.get('multiblockbox').setValue('2,3')">设置数据</button>
+</div>
+<script>
+var columns = [ {
+	type : 'checkbox',
+	width : '20px'
+}, {
+	title : '手机号',
+	field : 'mobile',
+	width : '100px'
+}, {
+	title : '会员号',
+	field : 'memberCode',
+	width : '100px'
+}, {
+	title : '姓名',
+	field : 'name',
+	width : '100px'
+}, {
+	title : '性别',
+	field : 'sex',
+	width : '100px'
+}, {
+	title : '出生日期',
+	field : 'birthday',
+	width : '100px'
+} ]
+	lyb.parse();
+	
+</script>

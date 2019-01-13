@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+<style>
+	.demo>div{
+		margin: 20px 0;
+	}
+</style>
+<div class="demo" style="padding: 50px;">
+
+<div id="decimal" class="lyb-decimal" data-value="" data-place-holder="请输入数字" data-required="true"></div>
+
+<div id="money" class="lyb-decimal" data-format="m4" data-value="" data-place-holder="请输入金额"></div>
+
+<div id="percent" class="lyb-decimal" data-format="p0" data-value="" data-place-holder="请输入百分百"></div>
+
+<div id="readonlytextbox" class="lyb-textbox" data-value="" data-readonly="true" data-place-holder="请输入账号"></div>
+
+<div id="disabledtextbox" class="lyb-textbox" data-value="" data-disabled="true" data-place-holder="请输入账号"></div>
+
+<div id="textbox" class="lyb-textbox" data-value="" data-max="8" data-place-holder="请输入账号"></div>
+
+<div id="password" class="lyb-password" data-value="" data-place-holder="请输入密码"></div>
+
+<div id="popupedit" class="lyb-popupedit" data-value="" data-place-holder="请选择人员"></div>
+
+<div id="datepicker" class="lyb-datepicker" data-value="2016-09-09" style="width: auto;"></div>
+
+<div id="datebox" class="lyb-datebox" data-value="2016-09-09" data-place-holder="请输入日期"></div>
+
+<div id="date" class="lyb-datebox" data-format="yyyy-mm-dd hh:mi" data-place-holder="请输入日期"></div>
+
+<div id="listbox" class="lyb-listbox" data-value="1" data-source="#sourceList#"></div>
+
+<div id="readonly" class="lyb-combobox" data-value="1" data-text-field="value" data-value-field="id" data-url="data/data.json" data-readonly="true"></div>
+
+<div id="disabled" class="lyb-combobox" data-value="1" data-text-field="value" data-value-field="id" data-url="data/data.json" data-disabled="true"></div>
+
+<div id="combobox" class="lyb-combobox" data-text-field="value" data-allow-multi="true" data-value-field="id" data-url="data/data.json" data-place-holder="请选择答案"></div>
+
+<div id="singalcombobox" class="lyb-combobox" data-text-field="value" data-value-field="id" data-url="data/data.json" data-place-holder="请选择答案"></div>
+
+<div id="searchbox" class="lyb-filterbox" data-value="1" data-url="data/data.json" data-allow-matcher="true" data-place-holder="请输入答案"></div>
+
+<div id="radiobox" class="lyb-radiobox" data-value="1" data-source="#sourceList#"></div>
+
+<div id="checkbox" class="lyb-checkbox" data-value="1,2" data-source="#sourceList#"></div>
+
+<div id="hidebox" class="lyb-hidbox" data-value="1"></div>
+
+<div id="bigtext" class="lyb-bigtext" data-value="1" data-place-holder="请输入账号"></div>
+
+<div id="accordion" class="lyb-accordion"></div>
+
+</div>
+<script>
+lyb.define(function(namespace){
+	namespace.sourceList = [ {
+		id : '1',
+		value : '男'
+	}, {
+		id : '2',
+		value : '女'
+	} ];
+	lyb.parse();
+});
+</script>

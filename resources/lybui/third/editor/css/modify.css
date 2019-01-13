@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+.wangEditor-container {
+	background-color: transparent;
+	border: none;
+}
+
+.wangEditor-container .wangEditor-txt {
+	padding: 0 4px 4px;
+	margin-top: 0;
+}
+
+.wangEditor-menu-container .menu-item {
+	float: left;
+	position: relative;
+	text-align: center;
+	height: 30px;
+	width: 30px;
+}

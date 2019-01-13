@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<style type="text/css">
+.combobox {
+	padding: 0 20px;
+}
+
+.combobox>div {
+	margin: 20px;
+}
+</style>
+<div class="combobox">
+	<div id="blockbox" class="lyb-blockbox" data-value="1" data-place-holder="的是提示信息" data-text-field="value" data-value-field="id" data-url="html/data.json"></div>
+	<button onclick="alert(lyb.get('blockbox').getValue())">获取数据</button>
+	<button onclick="lyb.get('blockbox').setValue('2,3')">设置数据</button>
+</div>
+<script>
+	lyb.parse();
+</script>

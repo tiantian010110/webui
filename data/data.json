@@ -1,0 +1,25 @@
+{	
+	"success": true,
+	"data": [
+		{
+			"id": 0,
+			"value": "enhancement"
+		},
+		{
+			"id": 1,
+			"value": "bug"
+		},
+		{
+			"id": 2,
+			"value": "duplicate"
+		},
+		{
+			"id": 3,
+			"value": "invalid"
+		},
+		{
+			"id": 4,
+			"value": "wontfix"
+		}
+	]
+}

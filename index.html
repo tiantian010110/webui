@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<title>WEBUI</title>
+	<link href="html/demo.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="resources/lybui/load.js"></script>
+	<script type="text/javascript" src="resources/lybui/spa.js"></script>
+	<style type="text/css">
+		html, body{
+			overflow: hidden;
+			height: 100%;
+			width: 100%;
+		}
+		div.WordSection1 {
+		    page: WordSection1;
+		    overflow: hidden;
+		    height: 100%;
+		    overflow-y: scroll;
+		}
+	</style>
+</head>
+<body>
+	<div class="lyb-layout" style="height: 100%;width: 100%;position: relative;">
+		<div class="layout-center" style=";position: absolute;left: 0;top: 0;right: 0;bottom: 0;">
+			<div class="center-left" style="height: 100%;width: 210px;background: #373837;overflow: auto;">
+				<div id="accordion" class="lyb-accordion" data-allow-multi="false"></div>
+			</div> 
+			<div id="spa" class="center-middle" style="position: absolute;left: 240px;top: 0;right: 0;bottom: 0;overflow-y: auto;">
+			</div>
+		</div>
+	</div>
+<script>
+
+	lyb.parse();
+	var accordion = lyb.get("accordion")
+	accordion.setData([
+         {"id":"-1","text":"字体图标", "url": "html/demo_fontclass.html"},
+         {"id":"0","text":"时间", "url": "html/date.html"},
+         {"id":"0","text":"弹窗", "url": "html/dialog.html"},
+         {"id":"1","text":"数字组件", "url": "html/decimal.html"},
+         {"id":"1","text":"demo页面", "url": "html/demo.html"},
+         {"id":"2","text":"表格过滤框", "url": "html/searchgridbox.html"},
+         {"id":"3","text":"多选过滤框", "url": "html/blockbox.html"},
+         {"id":"2","text":"下拉过滤框", "url": "html/filter.html"},
+         {"id":"4","text":"下拉选择框", "url": "html/combobox.html"},
+         {"id":"5","text":"表单", "url": "html/form.html"},
+         {"id":"6","text":"表格", "url": "html/datasheet.html"},
+         {"id":"7","text":"多页签", "url": "html/tabs.html"},
+         {"id":"7","text":"通知消息", "url": "html/notice.html"},
+         {"id":"8","text":"分页", "url": "html/pager.html"},
+         {"id":"9","text":"加载页面", "url": "html/loading.html"},
+         {"id":"10","text":"富文本编辑", "url": "html/richtext.html"},
+         {"id":"11","text":"手风琴导航", "url": "html/accordion.html"},
+         {"id":"11","text":"tree", "url": ""},
+         {"id":"11","text":"上传", "url": "html/upload.html"}
+    ]);
+	var spa = lyb.initSPA('spa'); 
+	spa.go('spa', ctx + 'html/tree.html');
+	accordion.bind('click', function(e){
+		var node = e.node;
+		if(node.url && node.url != ''){
+			spa.go('spa', ctx + node.url);
+		}
+	});
+</script>
+</body>

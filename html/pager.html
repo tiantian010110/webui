@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+
+<div id="pager" class="lyb-pager" style="width: 1020px;"></div>
+<script>
+	lyb.parse();
+	lyb.get('pager').setData(1000);
+	var pageSize = 20;
+	lyb.get('pager').bind("pagechange", function(e) {
+		var b = pageSize / e.pageSize;
+		this.setData(1000 * b)
+		console.log(e.pageNum, e.pageSize)
+	});
+</script>

@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<style>
+	.demo>div{
+		margin: 20px 0;
+	}
+</style>
+<div class="demo" style="padding: 50px;">
+<button type="button" onclick="#setStartDate#()">设置开始时间</button>
+<button type="button" onclick="#setEndDate#()">设置结束时间</button>
+<button type="button" onclick="#setValidDate#()">设置有效时间区间</button>
+<button type="button" onclick="#resetValidDate#()">重置有效时间</button>
+<button type="button" onclick="#getValue#()">获取选中时间</button>
+<button type="button" onclick="#setValue#('2016-09-09')">设置时间2016-09-09</button>
+<button type="button" onclick="#setValue#('')">设置时间''</button>
+<div id="datepicker1" class="lyb-datepicker" data-value="2016-09-09" style="width: auto;"></div>
+<div id="datepicker2" class="lyb-datepicker" style="width: auto;"></div>
+<div id="datebox1" class="lyb-datebox" data-value="2016-09-09" data-place-holder="请输入日期"></div>
+<div id="date1" class="lyb-datebox" data-format="yyyy-mm-dd hh:mi" data-place-holder="请输入日期"></div>
+</div>
+<script>
+	lyb.parse();
+	lyb.define(function(namespace){
+		var date = lyb.get('datepicker1');
+		namespace.setStartDate = function(){
+			date._setStartDate('2016-11-10');
+		};
+		namespace.setEndDate = function(){
+			date._setEndDate('2016-11-10');
+		};
+		namespace.setValidDate = function(){
+			date._setValidDate('2016-11-10', '2016-11-15');
+		};
+		namespace.resetValidDate = function(){
+			date._resetValidDate();
+		};
+		namespace.getValue = function(){
+			lyb.showTip(date.getValue());
+		};
+		namespace.setValue = function(v){
+			date.setValue(v);
+		};
+	});
+</script>

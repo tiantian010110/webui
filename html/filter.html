@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<style type="text/css">
+.combobox {
+	padding: 0 20px;
+}
+
+.combobox>div {
+	margin: 20px;
+}
+</style>
+<div class="combobox">
+	<div id="searchbox" class="lyb-filterbox" data-value="1" data-place-holder="的是提示信息" data-url="html/data.json" data-place-holder="请输入答案"></div>
+	<button onclick="alert(lyb.get('searchbox').getValue())">获取数据</button>
+	<button onclick="lyb.get('searchbox').setValue(2)">设置数据</button>
+	<div id="readonly" class="lyb-filterbox" data-value="1" data-url="html/data.json" data-readonly="true" data-place-holder="请输入答案"></div>
+	<button onclick="alert(lyb.get('readonly').getValue())">获取数据</button>
+	<div id="disabled" class="lyb-filterbox" data-value="1" data-url="html/data.json" data-disabled="tre" data-place-holder="请输入答案"></div>
+	<button onclick="alert(lyb.get('disabled').getValue())">获取数据</button>
+</div>
+<script>
+	var sourceList = [ {
+		id : '1',
+		value : '男'
+	}, {
+		id : '2',
+		value : '女'
+	} ];
+	
+	lyb.parse();
+</script>

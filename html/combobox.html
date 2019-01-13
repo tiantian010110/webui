@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<style type="text/css">
+.combobox1 {
+	padding: 0 20px;
+}
+
+.combobox1>div {
+	margin: 20px;
+}
+</style>
+<div class="combobox1">
+	<div id="readonly" class="lyb-combobox" data-value="1" data-text-field="value" data-readonly="true" data-value-field="id" data-url="html/data.json"></div>
+	<button onclick="alert(lyb.get('readonly').getValue())">获取数据</button>
+	<div id="disabled" class="lyb-combobox" data-value="1" data-text-field="value" data-disabled="true" data-value-field="id" data-url="html/data.json"></div>
+	<button onclick="alert(lyb.get('disabled').getValue())">获取数据</button>
+	<div id="combobox" class="lyb-combobox" data-text-field="value" data-allow-multi="true" data-value-field="id" data-value="1" data-url="html/data.json" data-place-holder="请选择答案"></div>
+	<button onclick="alert(lyb.get('combobox').getValue())">获取数据</button>
+	<button onclick="lyb.get('combobox').setValue('1,2,3')">设置数据</button>
+	<button onclick="lyb.get('combobox').setValue(0)">设置数据</button>
+	<div id="singalcombobox" class="lyb-combobox" data-text-field="value" data-value-field="id" data-url="html/data.json" data-required="true" data-place-holder="请选择答案"></div>
+	<button onclick="alert(lyb.get('singalcombobox').getValue())">获取数据</button>
+	<button onclick="lyb.get('singalcombobox').setValue(2)">设置数据</button>
+</div>
+<script>
+	lyb.parse();
+</script>

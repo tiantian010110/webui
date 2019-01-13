@@ -1,0 +1,101 @@
+<meta charset="UTF-8">
+<div class="lyb-form" id="form">
+	<div class="lyb-hidbox" data-name="uid"></div>
+	<div class="form-group">
+		<div class="form-group-title">
+			<span class="text">账户信息</span>
+		</div>
+		<div class="form-group-info clearfix">
+			<div class="list require">
+				<div class="list-left">手机号</div>
+				<div class="list-right">
+					<div class="lyb-textbox" data-name="mobile" data-required="true" data-valid-type="int"></div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="list-left">密码</div>
+				<div class="list-right">
+					<div class="lyb-password" data-name="passwd" data-place-holder="不填代表不修改"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-group-title">
+			<span class="text">基本信息</span>
+		</div>
+		<div class="form-group-info  clearfix">
+			<div class="list require">
+				<div class="list-left">姓名</div>
+				<div class="list-right">
+					<div class="lyb-textbox" data-name="name"  data-required="true"></div>
+				</div>
+			</div>
+			<div class="list require">
+				<div class="list-left">性别</div>
+				<div class="list-right">
+					<div class="lyb-radiobox" data-name="sex" data-source="sexList"></div>
+				</div>
+			</div>
+			<div class="list require">
+				<div class="list-left">出生日期</div>
+				<div class="list-right">
+					<div class="lyb-datebox" data-name="birthday"></div>
+				</div>
+
+			</div>
+			<div class="list">
+				<div class="list-left">邮箱</div>
+				<div class="list-right">
+					<div class="lyb-textbox" data-name="email" data-valid-type="email"></div>
+				</div>
+			</div>
+			<div class="list textarea p-width-100">
+				<div class="list-left">备注</div>
+				<div class="list-right">
+					<div class="lyb-textareabox" data-name="remark"></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="form-group-title">
+			<span class="text">互动信息</span>
+		</div>
+		<div class="form-group-info clearfix">
+			<div class="list">
+				<div class="list-left">参加讲座记录</div>
+				<div class="list-right">
+					<div class="lyb-filterbox" data-name="memberSource" data-url="html/data.json"></div>
+				</div>
+			</div>
+			<div class="list">
+				<div class="list-left">咨询讲座记录</div>
+				<div class="list-right">
+					<div class="lyb-blockbox" data-name="memberSource" data-source="sexList"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+var sexList = [{id: '0', value: '男'}, {id: '1', value: '女'}, {id: '2', value: '二椅子'}, {id: '3', value: '未知'}];
+	lyb.parse();
+	var form = lyb.get('form');
+	form.setData({"zid":1,
+		"uid":"94d958fc633b46acb2d313fc542f4d0e",
+		"memberCode":"M160920100001",
+		"mobile":"13911111111",
+		"passwd":"123456",
+		"name":"田鑫龙",
+		"sex":0,
+		"birthday":"2016-09-20",
+		"email":"123456@126.com",
+		"qq":"123456789",
+		"wechatCode":"98765432",
+		"remark":"特使太",
+		"memberSource":"3",
+	});
+</script>

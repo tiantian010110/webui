@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<style type="text/css">
+.combobox {
+	padding: 0 20px;
+}
+
+.combobox>div {
+	margin: 20px;
+}
+</style>
+<div class="combobox">
+	<button onclick="openDialog()">获取数据</button>
+</div>
+<script>
+	lyb.parse();
+	
+	function openDialog(){
+		lyb.showDialog({
+			title : "组件",
+	        url: ctx + 'html/demo.html',
+	        width : "560px"
+		});
+	}
+</script>

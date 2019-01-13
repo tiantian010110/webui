@@ -1,0 +1,51 @@
+<meta charset="utf-8">
+<div id="tree" class="lyb-tree" data-allow-multi="true" data-sort-field="id" data-allow-multi="false" style="width: 210px;"></div>
+<br/>
+<br/>
+<br/>
+<button onclick="#getSelectedNode#()">获取选中节点</button>
+<button onclick="#getSelectedNodes#()">获取选中节点数组</button>
+<button onclick="#getSelectedNodes#(true)">获取含有半选中状态的节点数组</button>
+<button onclick="#checkNode#()">选中单个节点</button>
+<script>
+lyb.define(function(namespace){
+	
+	lyb.parse();
+	var tree = lyb.get("tree");  
+	tree.setData([
+         {"id":"2","text":"一级节点01"},
+         {"id":"21", "pid": "2", "text":"二级节点011"},
+         {"id":"211", "pid": "21", "text":"三级节点0111"},
+         {"id":"212", "pid": "21", "text":"三级节点0112"},
+         {"id":"213", "pid": "21", "text":"三级节点0113"},
+         {"id":"22", "pid": "2", "text":"二级节点012"},
+         {"id":"23", "pid": "2", "text":"二级节点013"},
+         {"id":"24", "pid": "2", "text":"二级节点014"},
+         {"id":"3","text":"一级节点02"},
+         {"id":"31", "pid": "3", "text":"二级节点021"},
+         {"id":"32", "pid": "3", "text":"二级节点022"},
+         {"id":"33", "pid": "3", "text":"二级节点023"},
+         {"id":"34", "pid": "3", "text":"二级节点024"},
+         {"id":"6","text":"一级节点03"},
+         {"id":"61", "pid": "6", "text":"二级节点031"},
+         {"id":"62", "pid": "6", "text":"二级节点032"},
+         {"id":"63", "pid": "6", "text":"二级节点033"},
+         {"id":"64", "pid": "6", "text":"二级节点034"},
+         {"id":"7","text":"一级节点04"},
+         {"id":"71", "pid": "7", "text":"二级节点041"},
+         {"id":"72", "pid": "7", "text":"二级节点042"},
+         {"id":"73", "pid": "7", "text":"二级节点043"},
+         {"id":"74", "pid": "7", "text":"二级节点044"}
+    ]);
+	
+	namespace.getSelectedNode = function(){
+		console.log(tree.getSelectedNode());
+	};
+	namespace.getSelectedNodes = function(status){
+		console.log(tree.getSelectedNodes(status));
+	};
+	namespace.checkNode = function(){
+		tree.checkNode(tree.getSelectedNode());
+	};
+});
+</script>
